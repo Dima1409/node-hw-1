@@ -20,7 +20,6 @@ async function getContactById(contactId) {
   if (!contact) {
     return null;
   }
-  console.log(contact);
   return contact;
 }
 
@@ -40,7 +39,6 @@ async function addContact(name, email, phone) {
   const newContact = {name, email, phone, id: v4()};
   data.push(newContact);
   await updateContacts(data);
-  console.log(newContact)
   return newContact;
 }
 
